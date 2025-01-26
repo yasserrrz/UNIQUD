@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# UNIQUD
 
-## Getting Started
+UNIQUD is a web application designed to provide a unique and engaging experience for users and administrators. This repository contains the source code and setup instructions to get the project running locally.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- User and Admin roles
+- Simple hard-coded authentication
+- Middleware to protect routes
+- Interactive UI/UX
+- Responsive design
+- Dynamic content management
+
+## Technologies Used
+
+- **Framework:** Next.js
+- **Styling:** Tailwind CSS, ShadCN
+- **Data Handling:** Mock API
+- **Authentication:** Simple hard-coded authentication
+- **Middleware:** Route protection
+
+## Installation
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- Node.js (>=16.x)
+- npm or yarn
+
+### Steps to Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yasserrrz/UNIQUD.git
+   cd UNIQUD
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Set up environment variables: Create a `.env` file in the root directory and add the required environment variables (refer to `.env.example`).
+
+4. Run the development server:
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+5. Open the app in your browser at:
+
+   ```
+   http://localhost:3000
+   ```
+
+## Deployment
+
+The app can be deployed to platforms like Vercel or Netlify. Ensure production environment variables are configured correctly before deployment.
+
+## Folder Structure
+
+```
+UNIQUD/
+├── public/          # Static files
+├── src/
+│   ├── components/  # Reusable UI components
+│   ├── pages/       # Next.js pages
+│   ├── styles/      # Global styles
+│   ├── middleware/  # Route protection logic
+│   ├── utils/       # Helper functions
+│   ├── context      # Authcontext for authintications 
+├── .env.example     # Environment variable example
+├── package.json     # Project dependencies
+├── README.md        # Project documentation
+└── next.config.js   # Next.js configuration
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contributing
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Feel free to submit pull requests or report issues. Contributions are welcome!
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Contact
 
-To learn more about Next.js, take a look at the following resources:
+For any questions or support, please contact [yasserrmohammed44@gmail.com].
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
