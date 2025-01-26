@@ -10,7 +10,7 @@ export default function Home() {
     </h1>
     <p className="text-lg">Welcome To Reservations Management System</p>  
      <Link href="/login">
-      <button className="bg-[#000] hover:bg-gray-800 text-white font-bold py-2 px-4 rounded mt-4">
+      <button className="bg-[#000] hover:bg-gray-900 text-white font-bold py-2 px-4 rounded mt-4">
         Login
       </button>
      </Link>

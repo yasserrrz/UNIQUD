@@ -1,9 +1,10 @@
 "use client";
-import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/SIdebar";
-import { useState } from "react";
 
-
+export const metadata = {
+  title: "Reservation Management System",
+  description: "Manage hotel reservations",
+};
 
 export default function DashboardLayout({ children }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)

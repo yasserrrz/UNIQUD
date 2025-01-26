@@ -12,7 +12,7 @@ export default async function UserPage() {
   ).then((res) => res.json());
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
+      <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto">
           <h1 className="text-3xl font-semibold text-gray-900">
             Hello {userData?.name}

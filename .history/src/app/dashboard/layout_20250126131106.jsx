@@ -1,14 +1,11 @@
-"use client";
-import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/SIdebar";
-import { useState } from "react";
 
-
+export const metadata = {
+  title: "Reservation Management System",
+  description: "Manage hotel reservations",
+};
 
 export default function DashboardLayout({ children }) {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
-
-  const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen)
   return (
     <div className="h-full bg-gray-100">
       <div className="flex flex-col h-full">

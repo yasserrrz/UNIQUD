@@ -73,7 +73,7 @@ export default function LoginForm() {
                   required
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                  className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-[#104B99] focus:outline-none focus:ring-gray-900 sm:text-sm"
+                  className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-[#104B99] focus:outline-none focus:ring-[#104B99] sm:text-sm"
                 />
                 {errors.username && (
                   <p className="mt-2 text-sm text-red-600">{errors.username}</p>
@@ -97,7 +97,7 @@ export default function LoginForm() {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-[#104B99] focus:outline-none focus:ring-gray-900 sm:text-sm"
+                  className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-[#104B99] focus:outline-none focus:ring-[#104B99] sm:text-sm"
                 />
                 {errors.password && (
                   <p className="mt-2 text-sm text-red-600">{errors.password}</p>
@@ -108,7 +108,7 @@ export default function LoginForm() {
             <div>
               <Button
                 type="submit"
-                className="flex w-full justify-center rounded-md border border-transparent bg-gray-900 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+                className="flex w-full justify-center rounded-md border border-transparent bg-gray-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-[#1d3d66] focus:outline-none focus:ring-2 focus:ring-[#104B99] focus:ring-offset-2"
               >
                 Sign in
               </Button>
