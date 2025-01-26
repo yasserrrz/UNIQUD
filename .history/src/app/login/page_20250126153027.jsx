@@ -7,7 +7,6 @@ import { Label } from "@/components/ui/label";
 import Logo from "@/assets/unnamed.png";
 import { useAuth } from "@/contexts/AuthContext";
 import { set } from "date-fns";
-import { Loader } from "lucide-react";
 export default function LoginForm() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -21,7 +20,6 @@ export default function LoginForm() {
 
     if (!username.trim()) {
       newErrors.username = "Username is required";
-      
       isValid = false;
     } else if (username.length < 3) {
       newErrors.username = "Username must be at least 3 characters";
@@ -40,14 +38,8 @@ export default function LoginForm() {
     setLoading(true);
     e.preventDefault();
     if (validateForm()) {
-     try {
       login(username, password);
-     } catch (error) {
-      console.log(error);
-     }finally {
       setLoading(false);
-     }
-     
     }
   };
 
@@ -113,11 +105,11 @@ export default function LoginForm() {
             <div>
               <Button
                 type="submit"
-                disabled={loading}
-           
+              
+                disabled={`${loading}`}
                 className="flex w-full justify-center rounded-md border border-transparent bg-gray-900 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
               >
-              {loading ? <Loader className="mr-2 h-4 w-4 animate-spin" /> : "Sign in"}
+              {loading ? "Loading..." : "Sign in"}
               </Button>
             </div>
           </form>

@@ -3,8 +3,6 @@
 import React, { createContext, useState, useContext, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
-import { toast } from "@/hooks/use-toast";
-
 
 const AuthContext = createContext();
 
@@ -32,11 +30,7 @@ export const AuthProvider = ({ children }) => {
       Cookies.set("userRole", "admin", { expires: 1 });
       router.push("/dashboard/admin");
     }else{
-      toast({
-        title: "Error",
-        description: "Invalid username or password",
-        variant: "destructive",
-      });
+      
     }
   };
 

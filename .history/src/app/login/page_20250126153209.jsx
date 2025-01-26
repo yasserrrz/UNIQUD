@@ -21,7 +21,6 @@ export default function LoginForm() {
 
     if (!username.trim()) {
       newErrors.username = "Username is required";
-      
       isValid = false;
     } else if (username.length < 3) {
       newErrors.username = "Username must be at least 3 characters";
@@ -40,14 +39,8 @@ export default function LoginForm() {
     setLoading(true);
     e.preventDefault();
     if (validateForm()) {
-     try {
       login(username, password);
-     } catch (error) {
-      console.log(error);
-     }finally {
       setLoading(false);
-     }
-     
     }
   };
 

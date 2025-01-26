@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
 import { toast } from "@/hooks/use-toast";
 
-
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
@@ -31,12 +30,8 @@ export const AuthProvider = ({ children }) => {
       Cookies.set("authToken", "admin-token", { expires: 1 });
       Cookies.set("userRole", "admin", { expires: 1 });
       router.push("/dashboard/admin");
-    }else{
-      toast({
-        title: "Error",
-        description: "Invalid username or password",
-        variant: "destructive",
-      });
+    }else {
+      toast;
     }
   };
 
